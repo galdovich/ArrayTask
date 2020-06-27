@@ -5,10 +5,11 @@ import com.galdovich.task4_1.exception.CustomException;
 import com.galdovich.task4_1.validator.ArrayValidator;
 
 public class ArraySearchService {
+    private static final String MESSAGE = "Null exception";
 
     public int searchMaxValue(CustomArray array) throws CustomException {
         if (array == null || array.getLength() < 1) {
-            throw new CustomException("Null exception");
+            throw new CustomException(MESSAGE);
         }
         int max = 0;
         int length = array.getLength();
@@ -22,7 +23,7 @@ public class ArraySearchService {
 
     public int searchMinValue(CustomArray array) throws CustomException {
         if (array == null || array.getLength() < 1) {
-            throw new CustomException("Null exception");
+            throw new CustomException(MESSAGE);
         }
         int length = array.getLength();
         int min = array.getElement(0);
@@ -63,7 +64,7 @@ public class ArraySearchService {
 
     public int[] searchSimpleNumbers(CustomArray array) throws CustomException {
         if (array == null || array.getLength() < 1) {
-            throw new CustomException("Null exception");
+            throw new CustomException(MESSAGE);
         }
         int length = array.getLength();
         int amountSimpleNumbers = countAmountSimpleNumbers(array);
@@ -104,7 +105,7 @@ public class ArraySearchService {
     public int[] searchThreeDigitUniqueNumbers(CustomArray array)
             throws CustomException {
         if (array == null) {
-            throw new CustomException("Null exception");
+            throw new CustomException(MESSAGE);
         }
         ArrayValidator arrayValidator = new ArrayValidator();
         int size = 0;

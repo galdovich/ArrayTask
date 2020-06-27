@@ -45,7 +45,6 @@ public class ArrayCreateService {
     private int[] getConsoleInput(int limit) throws InputMismatchException{
         int[] array = new int[limit];
         Scanner scanner = new Scanner(System.in);
-        System.out.printf("Enter %d numbers: ", limit);
         for (int i = 0; i < limit; i++){
             int number = scanner.nextInt();
             array[i] = number;

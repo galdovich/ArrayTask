@@ -4,10 +4,11 @@ import com.galdovich.task4_1.entity.CustomArray;
 import com.galdovich.task4_1.exception.CustomException;
 
 public class ArraySortService {
+    private static final String MESSAGE = "Null exception";
 
     public int[] bubbleSort(CustomArray customArray) throws CustomException {
         if (customArray == null) {
-            throw new CustomException("Null exception");
+            throw new CustomException(MESSAGE);
         }
         int[] newArray = customArray.getArray();
         int length = customArray.getLength();
@@ -23,7 +24,7 @@ public class ArraySortService {
 
     public int[] selectionSort(CustomArray customArray) throws CustomException {
         if (customArray == null) {
-            throw new CustomException("Null exception");
+            throw new CustomException(MESSAGE);
         }
         int[] newArray = customArray.getArray();
         int length = newArray.length;
@@ -41,7 +42,7 @@ public class ArraySortService {
 
     public void insertionSort(CustomArray array) throws CustomException {
         if (array == null) {
-            throw new CustomException("Null exception");
+            throw new CustomException(MESSAGE);
         }
         int length = array.getLength();
         for (int i = 1; i < length; i++) {
